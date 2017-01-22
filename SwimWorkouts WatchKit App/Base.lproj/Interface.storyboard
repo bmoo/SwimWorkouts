@@ -1,15 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwimWorkouts_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="MFd-PN-oRK">
+                            <items>
+                                <tableRow identifier="workoutRowController" id="BhN-r0-bgg" customClass="WorkoutTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="DlI-nC-KfH">
+                                        <items>
+                                            <label alignment="left" text="Label" id="FhI-nj-RFg"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="8wS-5V-Bt6" kind="push" identifier="workoutToSegmentSegue" id="gFW-b6-T4t"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="workoutLabel" destination="FhI-nj-RFg" id="ZpM-Su-g7H"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="workoutTable" destination="MFd-PN-oRK" id="Y3f-kg-y1k"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="112" y="26"/>
+        </scene>
+        <!--Segment Controller-->
+        <scene sceneID="y9S-gb-Xp9">
+            <objects>
+                <controller id="8wS-5V-Bt6" customClass="SegmentController" customModule="SwimWorkouts_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="jAL-Vz-SW6">
+                            <items>
+                                <tableRow id="kCB-0L-BXs">
+                                    <group key="rootItem" width="1" alignment="left" id="fqI-fK-fZ2"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="419" y="26"/>
         </scene>
     </scenes>
 </document>

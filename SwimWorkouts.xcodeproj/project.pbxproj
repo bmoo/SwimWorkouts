@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22A9D961E3563D600A72AAF /* WorkoutTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */; };
+		A22A9D981E35681700A72AAF /* SegmentTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */; };
+		A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D991E356D7C00A72AAF /* SegmentController.swift */; };
 		A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */; };
 		A2A39FA21E353964001D3BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FA11E353964001D3BA4 /* ViewController.swift */; };
 		A2A39FA51E353964001D3BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FA31E353964001D3BA4 /* Main.storyboard */; };
@@ -21,6 +24,7 @@
 		A2A39FD91E353964001D3BA4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FD81E353964001D3BA4 /* InterfaceController.swift */; };
 		A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */; };
 		A2A39FDD1E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FDC1E353964001D3BA4 /* Assets.xcassets */; };
+		A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FF21E354BE7001D3BA4 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableRowController.swift; sourceTree = "<group>"; };
+		A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableRowController.swift; sourceTree = "<group>"; };
+		A22A9D991E356D7C00A72AAF /* SegmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		A2A39F9C1E353964001D3BA4 /* SwimWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2A39FA11E353964001D3BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		A2A39FDC1E353964001D3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A39FDE1E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A39FF21E354BE7001D3BA4 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22A9D9B1E356EBE00A72AAF /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */,
+				A2A39FD81E353964001D3BA4 /* InterfaceController.swift */,
+			);
+			name = Workout;
+			sourceTree = "<group>";
+		};
+		A22A9D9C1E356EC900A72AAF /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */,
+				A22A9D991E356D7C00A72AAF /* SegmentController.swift */,
+			);
+			name = Segment;
+			sourceTree = "<group>";
+		};
 		A2A39F931E353963001D3BA4 = {
 			isa = PBXGroup;
 			children = (
@@ -204,10 +230,12 @@
 		A2A39FD71E353964001D3BA4 /* SwimWorkouts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				A2A39FD81E353964001D3BA4 /* InterfaceController.swift */,
+				A22A9D9C1E356EC900A72AAF /* Segment */,
+				A22A9D9B1E356EBE00A72AAF /* Workout */,
 				A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */,
 				A2A39FDC1E353964001D3BA4 /* Assets.xcassets */,
 				A2A39FDE1E353964001D3BA4 /* Info.plist */,
+				A2A39FF21E354BE7001D3BA4 /* Workout.swift */,
 			);
 			path = "SwimWorkouts WatchKit Extension";
 			sourceTree = "<group>";
@@ -440,7 +468,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */,
+				A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */,
 				A2A39FD91E353964001D3BA4 /* InterfaceController.swift in Sources */,
+				A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */,
+				A22A9D961E3563D600A72AAF /* WorkoutTableRowController.swift in Sources */,
+				A22A9D981E35681700A72AAF /* SegmentTableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +795,7 @@
 				A2A39FE31E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2A39FE51E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkouts WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -771,6 +804,7 @@
 				A2A39FE71E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2A39FE91E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkouts" */ = {
 			isa = XCConfigurationList;
@@ -779,6 +813,7 @@
 				A2A39FEB1E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2A39FEC1E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkoutsTests" */ = {
 			isa = XCConfigurationList;
@@ -787,6 +822,7 @@
 				A2A39FEE1E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2A39FEF1E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkoutsUITests" */ = {
 			isa = XCConfigurationList;
@@ -795,6 +831,7 @@
 				A2A39FF11E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

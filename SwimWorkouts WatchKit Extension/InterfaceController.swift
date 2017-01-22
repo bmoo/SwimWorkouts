@@ -11,10 +11,22 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    var workouts: [Workout] = [DefaultWorkout(), SecondWorkout()]
 
+    
+    @IBOutlet var workoutTable: WKInterfaceTable!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        NSLog("InterfaceController.awake()")
+        
+        workoutTable.setNumberOfRows(workouts.count, withRowType: "workoutRowController")
+        
+        for (index, value) in workouts.enumerated() {
+            let row = workoutTable.rowController(at: index) as! WorkoutTableRowController
+            row.workoutLabel.setText(value.description)
+        }
         // Configure interface objects here.
     }
     
@@ -27,5 +39,4 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }
