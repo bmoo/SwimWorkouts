@@ -11,7 +11,7 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-    var workouts: [Workout] = [DefaultWorkout(), FifthWorkout()]
+    var workouts: [Workout] = [FifthWorkout(), SixthWorkout()]
 
     @IBOutlet var workoutTable: WKInterfaceTable!
     

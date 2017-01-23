@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                                 <tableRow identifier="workoutRowController" id="BhN-r0-bgg" customClass="WorkoutTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="DlI-nC-KfH">
                                         <items>
-                                            <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.69999999999999996" id="FhI-nj-RFg"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="2" minimumScaleFactor="0.80000000000000004" id="FhI-nj-RFg"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -45,29 +45,70 @@
                         <label alignment="left" text="Notes" id="eAU-jp-KHy">
                             <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <label alignment="left" text="Label" numberOfLines="2" minimumScaleFactor="0.5" id="bIk-ZZ-khB"/>
+                        <label alignment="left" text="Label" numberOfLines="4" minimumScaleFactor="0.5" id="bIk-ZZ-khB"/>
                         <separator alignment="left" id="NqL-UJ-Chx">
                             <color key="color" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         </separator>
-                        <table alignment="left" id="jAL-Vz-SW6">
+                        <label alignment="left" text="Warm-Up" id="QtN-Ma-8ur">
+                            <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" id="jAL-Vz-SW6" userLabel="WarmUp Table">
                             <items>
-                                <tableRow identifier="segmentRowController" id="kCB-0L-BXs" customClass="SegmentTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
+                                <tableRow identifier="warmUpRowController" id="kCB-0L-BXs" customClass="WarmUpRowController" customModule="SwimWorkouts_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="fqI-fK-fZ2">
                                         <items>
                                             <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.80000000000000004" id="uAo-8A-1SE"/>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="segmentLabel" destination="uAo-8A-1SE" id="k4g-lc-FLq"/>
+                                        <outlet property="segmentLabel" destination="uAo-8A-1SE" id="DcT-tl-K6K"/>
                                         <segue destination="QLu-HS-gIF" kind="push" id="4SP-4X-ZrX"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Main Set" id="bTS-qP-HA8">
+                            <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" id="hgp-7I-rmm" userLabel="MainSet Table">
+                            <items>
+                                <tableRow identifier="mainSetRowController" id="DOA-l7-H93" customClass="MainSetRowController" customModule="SwimWorkouts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="epA-fu-J6K">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.80000000000000004" id="vyg-6I-aCt"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="segmentLabel" destination="vyg-6I-aCt" id="MV6-2G-Xjl"/>
+                                        <segue destination="QLu-HS-gIF" kind="push" id="LnK-ih-kYY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Cool-Down" id="vAF-Qo-exr">
+                            <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" id="iZZ-fz-1Sk" userLabel="CoolDown Table">
+                            <items>
+                                <tableRow identifier="coolDownRowController" id="mcu-LX-SHJ" customClass="CoolDownRowController" customModule="SwimWorkouts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="nCo-YT-rUk">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.80000000000000004" id="uaH-PT-Mvq"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="segmentLabel" destination="uaH-PT-Mvq" id="vjm-RI-LYK"/>
+                                        <segue destination="QLu-HS-gIF" kind="push" id="zUU-BC-GfM"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
+                        <outlet property="coolDownTable" destination="iZZ-fz-1Sk" id="b33-jS-HbD"/>
+                        <outlet property="mainSetTable" destination="hgp-7I-rmm" id="tj2-ng-iRW"/>
                         <outlet property="notesLabel" destination="bIk-ZZ-khB" id="Dms-jo-m0c"/>
-                        <outlet property="segmentTable" destination="jAL-Vz-SW6" id="Chv-kQ-8T2"/>
+                        <outlet property="warmUpTable" destination="jAL-Vz-SW6" id="0Vx-cp-yKh"/>
                     </connections>
                 </controller>
             </objects>
@@ -81,7 +122,7 @@
                         <label alignment="left" text="Details" id="11u-oz-ggc">
                             <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <label width="136" alignment="left" text="Label" numberOfLines="5" minimumScaleFactor="0.80000000000000004" id="TQY-bF-6cM"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="5" minimumScaleFactor="0.69999999999999996" id="TQY-bF-6cM"/>
                         <separator alignment="left" verticalAlignment="bottom" id="f37-LK-lOz">
                             <color key="color" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         </separator>
@@ -122,4 +163,7 @@
             <point key="canvasLocation" x="-258" y="40"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4SP-4X-ZrX"/>
+    </inferredMetricsTieBreakers>
 </document>

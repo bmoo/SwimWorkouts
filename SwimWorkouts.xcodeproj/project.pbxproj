@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A22A9D961E3563D600A72AAF /* WorkoutTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */; };
-		A22A9D981E35681700A72AAF /* SegmentTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */; };
+		A22A9D981E35681700A72AAF /* RowControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D971E35681700A72AAF /* RowControllers.swift */; };
 		A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D991E356D7C00A72AAF /* SegmentController.swift */; };
 		A22A9D9F1E35BAA400A72AAF /* SegmentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D9E1E35BAA400A72AAF /* SegmentDetailController.swift */; };
 		A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */; };
@@ -86,7 +86,7 @@
 
 /* Begin PBXFileReference section */
 		A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableRowController.swift; sourceTree = "<group>"; };
-		A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentTableRowController.swift; sourceTree = "<group>"; };
+		A22A9D971E35681700A72AAF /* RowControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowControllers.swift; sourceTree = "<group>"; };
 		A22A9D991E356D7C00A72AAF /* SegmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		A22A9D9E1E35BAA400A72AAF /* SegmentDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentDetailController.swift; sourceTree = "<group>"; };
 		A2A39F9C1E353964001D3BA4 /* SwimWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +158,7 @@
 		A22A9D9C1E356EC900A72AAF /* Segment */ = {
 			isa = PBXGroup;
 			children = (
-				A22A9D971E35681700A72AAF /* SegmentTableRowController.swift */,
+				A22A9D971E35681700A72AAF /* RowControllers.swift */,
 				A22A9D991E356D7C00A72AAF /* SegmentController.swift */,
 			);
 			name = Segment;
@@ -484,7 +484,7 @@
 				A2A39FD91E353964001D3BA4 /* WorkoutController.swift in Sources */,
 				A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */,
 				A22A9D961E3563D600A72AAF /* WorkoutTableRowController.swift in Sources */,
-				A22A9D981E35681700A72AAF /* SegmentTableRowController.swift in Sources */,
+				A22A9D981E35681700A72AAF /* RowControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
