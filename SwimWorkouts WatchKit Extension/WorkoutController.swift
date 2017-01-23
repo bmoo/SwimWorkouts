@@ -13,8 +13,12 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     var workouts: [Workout] = [DefaultWorkout(), SecondWorkout()]
 
-    
     @IBOutlet var workoutTable: WKInterfaceTable!
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
+        NSLog("Other contextForSegue")
+        return workouts[rowIndex]
+    }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -27,9 +31,7 @@ class InterfaceController: WKInterfaceController {
             let row = workoutTable.rowController(at: index) as! WorkoutTableRowController
             row.workoutLabel.setText(value.description)
         }
-        // Configure interface objects here.
     }
-    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

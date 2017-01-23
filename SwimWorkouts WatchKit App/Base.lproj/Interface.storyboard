@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Workouts-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwimWorkouts_WatchKit_App" customModuleProvider="target">
+                <controller identifier="workoutsController" title="Workouts" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SwimWorkouts_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="MFd-PN-oRK">
                             <items>
@@ -21,12 +21,10 @@
                                         <items>
                                             <label alignment="left" text="Label" id="FhI-nj-RFg"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="8wS-5V-Bt6" kind="push" identifier="workoutToSegmentSegue" id="gFW-b6-T4t"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="workoutLabel" destination="FhI-nj-RFg" id="ZpM-Su-g7H"/>
+                                        <segue destination="8wS-5V-Bt6" kind="push" id="6gL-uW-eVH"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -37,24 +35,34 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="112" y="26"/>
+            <point key="canvasLocation" x="-905" y="40"/>
         </scene>
-        <!--Segment Controller-->
+        <!--segmentsController-->
         <scene sceneID="y9S-gb-Xp9">
             <objects>
-                <controller id="8wS-5V-Bt6" customClass="SegmentController" customModule="SwimWorkouts_WatchKit_Extension">
+                <controller identifier="segmentsController" id="8wS-5V-Bt6" customClass="SegmentController" customModule="SwimWorkouts_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="jAL-Vz-SW6">
                             <items>
-                                <tableRow id="kCB-0L-BXs">
-                                    <group key="rootItem" width="1" alignment="left" id="fqI-fK-fZ2"/>
+                                <tableRow identifier="segmentRowController" id="kCB-0L-BXs" customClass="SegmentTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="fqI-fK-fZ2">
+                                        <items>
+                                            <label alignment="left" text="Label" minimumScaleFactor="0.5" id="uAo-8A-1SE"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="segmentLabel" destination="uAo-8A-1SE" id="k4g-lc-FLq"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="segmentTable" destination="jAL-Vz-SW6" id="Chv-kQ-8T2"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="419" y="26"/>
+            <point key="canvasLocation" x="-575" y="40"/>
         </scene>
     </scenes>
 </document>

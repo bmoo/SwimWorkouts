@@ -21,7 +21,7 @@
 		A2A39FCB1E353964001D3BA4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FC91E353964001D3BA4 /* Interface.storyboard */; };
 		A2A39FCD1E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FCC1E353964001D3BA4 /* Assets.xcassets */; };
 		A2A39FD41E353964001D3BA4 /* SwimWorkouts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A2A39FD31E353964001D3BA4 /* SwimWorkouts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A2A39FD91E353964001D3BA4 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FD81E353964001D3BA4 /* InterfaceController.swift */; };
+		A2A39FD91E353964001D3BA4 /* WorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FD81E353964001D3BA4 /* WorkoutController.swift */; };
 		A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */; };
 		A2A39FDD1E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FDC1E353964001D3BA4 /* Assets.xcassets */; };
 		A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FF21E354BE7001D3BA4 /* Workout.swift */; };
@@ -105,7 +105,7 @@
 		A2A39FCC1E353964001D3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A39FCE1E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A39FD31E353964001D3BA4 /* SwimWorkouts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwimWorkouts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2A39FD81E353964001D3BA4 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A2A39FD81E353964001D3BA4 /* WorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutController.swift; sourceTree = "<group>"; };
 		A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		A2A39FDC1E353964001D3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A39FDE1E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A22A9D951E3563D600A72AAF /* WorkoutTableRowController.swift */,
-				A2A39FD81E353964001D3BA4 /* InterfaceController.swift */,
+				A2A39FD81E353964001D3BA4 /* WorkoutController.swift */,
 			);
 			name = Workout;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 			files = (
 				A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */,
 				A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */,
-				A2A39FD91E353964001D3BA4 /* InterfaceController.swift in Sources */,
+				A2A39FD91E353964001D3BA4 /* WorkoutController.swift in Sources */,
 				A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */,
 				A22A9D961E3563D600A72AAF /* WorkoutTableRowController.swift in Sources */,
 				A22A9D981E35681700A72AAF /* SegmentTableRowController.swift in Sources */,
