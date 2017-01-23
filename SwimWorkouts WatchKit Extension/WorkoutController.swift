@@ -16,7 +16,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var workoutTable: WKInterfaceTable!
     
     override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
-        NSLog("Other contextForSegue")
+
         return workouts[rowIndex]
     }
     

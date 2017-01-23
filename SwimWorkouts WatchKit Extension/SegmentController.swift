@@ -15,6 +15,12 @@ class SegmentController: WKInterfaceController {
     
     var workout: Workout!
     
+    override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
+        
+        return workout.segments[rowIndex]
+    }
+    
+
     override func awake(withContext context: Any?) {
         workout = context as! Workout
         self.setTitle(workout.description)

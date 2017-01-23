@@ -52,6 +52,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="segmentLabel" destination="uAo-8A-1SE" id="k4g-lc-FLq"/>
+                                        <segue destination="QLu-HS-gIF" kind="push" id="4SP-4X-ZrX"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -63,6 +64,33 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-575" y="40"/>
+        </scene>
+        <!--segmentDetail-->
+        <scene sceneID="X9v-L1-9AC">
+            <objects>
+                <controller identifier="segmentDetail" id="QLu-HS-gIF" customClass="SegmentDetailController" customModule="SwimWorkouts_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Details" id="11u-oz-ggc">
+                            <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label width="136" height="59" alignment="left" text="Label" numberOfLines="3" id="TQY-bF-6cM"/>
+                        <label alignment="left" text="Rest" id="9JM-bl-9yK">
+                            <color key="textColor" red="0.20000000000000001" green="0.85490196080000003" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="NBV-VG-r8N"/>
+                        <label alignment="left" text="Reps" id="nbD-F2-GTg">
+                            <color key="textColor" red="0.51372549020000002" green="0.58039215690000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="GwA-wM-X4c"/>
+                    </items>
+                    <connections>
+                        <outlet property="detailLabel" destination="TQY-bF-6cM" id="cVS-Bh-CNQ"/>
+                        <outlet property="repsLabel" destination="GwA-wM-X4c" id="AUb-ed-fnt"/>
+                        <outlet property="restLabel" destination="NBV-VG-r8N" id="2Qz-Ef-Db9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-258" y="27"/>
         </scene>
     </scenes>
 </document>
