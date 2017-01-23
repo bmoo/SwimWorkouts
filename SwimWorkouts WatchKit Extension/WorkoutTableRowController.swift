@@ -12,9 +12,4 @@ import WatchKit
 public class WorkoutTableRowController: NSObject {
     
     @IBOutlet var workoutLabel: WKInterfaceLabel!
-    @IBAction func workoutTapped() {
-        
-    }
-    
-
 }

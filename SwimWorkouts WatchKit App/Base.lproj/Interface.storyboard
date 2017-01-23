@@ -19,7 +19,7 @@
                                 <tableRow identifier="workoutRowController" id="BhN-r0-bgg" customClass="WorkoutTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="DlI-nC-KfH">
                                         <items>
-                                            <label alignment="left" text="Label" id="FhI-nj-RFg"/>
+                                            <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.69999999999999996" id="FhI-nj-RFg"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -42,12 +42,19 @@
             <objects>
                 <controller identifier="segmentsController" id="8wS-5V-Bt6" customClass="SegmentController" customModule="SwimWorkouts_WatchKit_Extension">
                     <items>
+                        <label alignment="left" text="Notes" id="eAU-jp-KHy">
+                            <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" numberOfLines="2" minimumScaleFactor="0.5" id="bIk-ZZ-khB"/>
+                        <separator alignment="left" id="NqL-UJ-Chx">
+                            <color key="color" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
                         <table alignment="left" id="jAL-Vz-SW6">
                             <items>
                                 <tableRow identifier="segmentRowController" id="kCB-0L-BXs" customClass="SegmentTableRowController" customModule="SwimWorkouts_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="fqI-fK-fZ2">
                                         <items>
-                                            <label alignment="left" text="Label" minimumScaleFactor="0.5" id="uAo-8A-1SE"/>
+                                            <label alignment="center" verticalAlignment="center" text="Label" minimumScaleFactor="0.80000000000000004" id="uAo-8A-1SE"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -59,6 +66,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="notesLabel" destination="bIk-ZZ-khB" id="Dms-jo-m0c"/>
                         <outlet property="segmentTable" destination="jAL-Vz-SW6" id="Chv-kQ-8T2"/>
                     </connections>
                 </controller>
@@ -73,24 +81,45 @@
                         <label alignment="left" text="Details" id="11u-oz-ggc">
                             <color key="textColor" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <label width="136" height="59" alignment="left" text="Label" numberOfLines="3" id="TQY-bF-6cM"/>
-                        <label alignment="left" text="Rest" id="9JM-bl-9yK">
-                            <color key="textColor" red="0.20000000000000001" green="0.85490196080000003" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <label alignment="left" text="Label" id="NBV-VG-r8N"/>
-                        <label alignment="left" text="Reps" id="nbD-F2-GTg">
-                            <color key="textColor" red="0.51372549020000002" green="0.58039215690000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
-                        <label alignment="left" text="Label" id="GwA-wM-X4c"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="5" minimumScaleFactor="0.80000000000000004" id="TQY-bF-6cM"/>
+                        <separator alignment="left" verticalAlignment="bottom" id="f37-LK-lOz">
+                            <color key="color" red="0.094117647060000004" green="0.50588235290000005" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <group width="1" alignment="left" verticalAlignment="bottom" spacing="3" id="Qbz-CN-R5y">
+                            <items>
+                                <label alignment="left" text="Distance" id="rUY-Xt-1km">
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label alignment="left" text="Label" id="y1V-Js-WQz"/>
+                                <label alignment="right" text="Reps" id="nbD-F2-GTg">
+                                    <color key="textColor" red="0.51372549020000002" green="0.58039215690000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label alignment="right" text="Label" id="GwA-wM-X4c"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="1ID-Y9-iaj">
+                            <items>
+                                <label alignment="left" text="Snorkel" id="JcX-QX-Wce">
+                                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label alignment="left" text="Label" id="Mwk-6r-WGB"/>
+                                <label alignment="right" text="Rest" id="9JM-bl-9yK">
+                                    <color key="textColor" red="0.20000000000000001" green="0.85490196080000003" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label alignment="right" text="Label" id="NBV-VG-r8N"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="detailLabel" destination="TQY-bF-6cM" id="cVS-Bh-CNQ"/>
+                        <outlet property="distanceLabel" destination="y1V-Js-WQz" id="9Su-Lt-q4e"/>
                         <outlet property="repsLabel" destination="GwA-wM-X4c" id="AUb-ed-fnt"/>
                         <outlet property="restLabel" destination="NBV-VG-r8N" id="2Qz-Ef-Db9"/>
+                        <outlet property="snorkelLabel" destination="Mwk-6r-WGB" id="lo0-tj-ern"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-258" y="27"/>
+            <point key="canvasLocation" x="-258" y="40"/>
         </scene>
     </scenes>
 </document>

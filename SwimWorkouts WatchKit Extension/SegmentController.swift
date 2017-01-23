@@ -13,6 +13,8 @@ class SegmentController: WKInterfaceController {
     
     @IBOutlet var segmentTable: WKInterfaceTable!
     
+    @IBOutlet var notesLabel: WKInterfaceLabel!
+    
     var workout: Workout!
     
     override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
@@ -20,10 +22,11 @@ class SegmentController: WKInterfaceController {
         return workout.segments[rowIndex]
     }
     
-
     override func awake(withContext context: Any?) {
         workout = context as! Workout
         self.setTitle(workout.description)
+        
+        notesLabel.setText("\(workout.note)")
         
         segmentTable.setNumberOfRows(workout.segments.count, withRowType: "segmentRowController")
         
@@ -32,5 +35,4 @@ class SegmentController: WKInterfaceController {
             row.segmentLabel.setText(value.description)
         }
     }
-    
 }
