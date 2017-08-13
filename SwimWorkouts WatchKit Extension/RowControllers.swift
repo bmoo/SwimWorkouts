@@ -9,14 +9,18 @@
 import Foundation
 import WatchKit
 
-public class WarmUpRowController: NSObject {
+protocol SegmentLabeller {
+    var segmentLabel: WKInterfaceLabel! {get set}
+}
+
+public class WarmUpRowController: NSObject, SegmentLabeller {
     @IBOutlet var segmentLabel: WKInterfaceLabel!
 }
 
-public class MainSetRowController: NSObject {
+public class MainSetRowController: NSObject, SegmentLabeller {
     @IBOutlet var segmentLabel: WKInterfaceLabel!
 }
 
-public class CoolDownRowController: NSObject {
+public class CoolDownRowController: NSObject, SegmentLabeller {
     @IBOutlet var segmentLabel: WKInterfaceLabel!
 }

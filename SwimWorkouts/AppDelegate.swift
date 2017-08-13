@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    
     var window: UIWindow?
 
 
@@ -35,12 +36,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+            
+            if (session.isPaired && session.isWatchAppInstalled && session.isReachable) {
+                do {
+                    try session.updateApplicationContext(["foo": "bar"])
+                    print("Sent foo across the wire")
+                } catch {
+                    NSLog("got an error")
+                }
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
+    // ****** WCSessionDelegate *********    @available(iOS 9.3, *)
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    @available(iOS 9.3, *)
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    @available(iOS 9.3, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    
 }
 

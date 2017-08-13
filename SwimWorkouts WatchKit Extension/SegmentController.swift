@@ -9,6 +9,27 @@
 import Foundation
 import WatchKit
 
+class SegmentInitializer {
+    
+    var segmentNumber: Int
+    let workout: Workout
+    
+    init(workout: Workout) {
+        self.workout = workout
+        segmentNumber = 1
+    }
+    
+    func initializeTable(segments: [Segment], rowType: String, table: WKInterfaceTable) {
+        table.setNumberOfRows(segments.count, withRowType: rowType)
+        
+        for (index, value) in segments.enumerated() {
+            let row = table.rowController(at: index) as! SegmentLabeller
+            row.segmentLabel.setText("\(segmentNumber): \(value.description)")
+            self.segmentNumber += 1
+        }
+    }
+}
+
 class SegmentController: WKInterfaceController {
     
     @IBOutlet var warmUpTable: WKInterfaceTable!
@@ -34,40 +55,20 @@ class SegmentController: WKInterfaceController {
         }
     }
     
-    override func awake(withContext context: Any?) {
-        workout = context as! Workout
-        self.setTitle(workout.description)
+    fileprivate func initializeSegments() {
+        let segmentInitializer = SegmentInitializer(workout: workout)
         
-        notesLabel.setText("\(workout.note)")
-        
-        var segmentNumber: Int = 1
-        
-        warmUpTable.setNumberOfRows(workout.segments.warmUp.count, withRowType: "warmUpRowController")
-        
-        for (index, value) in workout.segments.warmUp.enumerated() {
-            let row = warmUpTable.rowController(at: index) as! WarmUpRowController
-            row.segmentLabel.setText("\(segmentNumber): \(value.description)")
-            segmentNumber += 1
-        }
-        
-        mainSetTable.setNumberOfRows(workout.segments.mainSet.count, withRowType: "mainSetRowController")
-        
-        for (index, value) in workout.segments.mainSet.enumerated() {
-            let row = mainSetTable.rowController(at: index) as!
-            MainSetRowController
-            row.segmentLabel.setText("\(segmentNumber): \(value.description)")
-            segmentNumber += 1
-        }
-        
-        coolDownTable.setNumberOfRows(workout.segments.coolDown.count, withRowType: "coolDownRowController")
-        
-        for (index, value) in workout.segments.coolDown.enumerated() {
-            let row = coolDownTable.rowController(at: index) as!
-            CoolDownRowController
-            row.segmentLabel.setText("\(segmentNumber): \(value.description)")
-            segmentNumber += 1
-        }
+        segmentInitializer.initializeTable(segments: workout.segments.warmUp, rowType: "warmUpRowController", table: warmUpTable)
+        segmentInitializer.initializeTable(segments: workout.segments.mainSet, rowType: "mainSetRowController", table: mainSetTable)
+        segmentInitializer.initializeTable(segments: workout.segments.coolDown, rowType: "coolDownRowController", table: coolDownTable)
     }
     
-    
+    override func awake(withContext context: Any?) {
+        workout = context as! Workout
+        
+        self.setTitle(workout.description)
+        notesLabel.setText("\(workout.note)")
+        
+        initializeSegments()
+    }
 }
