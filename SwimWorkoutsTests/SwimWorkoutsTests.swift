@@ -7,31 +7,54 @@
 //
 
 import XCTest
+import WatchConnectivity
 @testable import SwimWorkouts
 
-class SwimWorkoutsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
+class MockWCSession: WatchConnectingSession {
+    func transferUserInfo(_ userInfo: [String : Any]) -> WCSessionUserInfoTransfer {
+        sentContext = userInfo
         
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        return WCSessionUserInfoTransfer.init()
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    var paired, watchAppInstalled, reachable: Bool
+    var sentContext: [String : Any]? = nil
+
+    init(paired: Bool, watchAppInstalled: Bool, reachable: Bool) {
+        self.paired = paired
+        self.watchAppInstalled = watchAppInstalled
+        self.reachable = reachable
     }
-    
+
+    var isWatchAppInstalled: Bool {
+        return watchAppInstalled
+    }
+    var isPaired: Bool {
+        return paired
+    }
+    var isReachable: Bool {
+        return reachable
+    }
 }
+
+class SwimWorkoutsTests: XCTestCase {
+    func testSendStartupData() {
+        let session = MockWCSession(paired: true, watchAppInstalled: true, reachable: true)
+        
+        let delegate = AppDelegate()
+        delegate.sendStartupData(session)
+        
+        XCTAssertNotNil(session.sentContext)
+    }
+    
+    func testSendStartupData_dontDoAnythingIfTheresNoWatch() {
+        let session = MockWCSession(paired: true, watchAppInstalled: true, reachable: false)
+        
+        let delegate = AppDelegate()
+        delegate.sendStartupData(session)
+        
+        XCTAssertNil(session.sentContext)
+
+    }
+}
+

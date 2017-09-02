@@ -10,31 +10,33 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
-    var workouts: [Workout] = [FifthWorkout(), SixthWorkout()]
-
+class WorkoutController: WKInterfaceController {
+    var workouts: [Workout] = []
+    
     @IBOutlet var workoutTable: WKInterfaceTable!
     
     override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
-
         return workouts[rowIndex]
     }
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        NSLog("InterfaceController.awake()")
+        workouts = context as! [Workout]
         
+        print("InterfaceController.awake()")
+      }
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+     
+        print("willActivate()")
         workoutTable.setNumberOfRows(workouts.count, withRowType: "workoutRowController")
         
         for (index, value) in workouts.enumerated() {
             let row = workoutTable.rowController(at: index) as! WorkoutTableRowController
             row.workoutLabel.setText(value.description)
         }
-    }
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
     }
     
     override func didDeactivate() {

@@ -1,8 +1,8 @@
 //
-//  Workout.swift
+//  Data.swift
 //  SwimWorkouts
 //
-//  Created by Brad Moore on 1/22/17.
+//  Created by Brad Moore on 9/1/17.
 //  Copyright © 2017 Brad Moore. All rights reserved.
 //
 
@@ -28,9 +28,13 @@ struct Segment {
     var reps: Int
 }
 
-func createWorkoutFrom(dictionary: Dictionary<String, Any>) -> Workout {
-    let description: String = dictionary["description"] as? String ?? ""
-    let note = dictionary["note"] as? String ?? ""
+func createUserInfoFromWorkout(workout: Workout) -> [String: Any] {
+    var result = [String: Any]()
     
-    return Workout(description: description, segments: SegmentSet(warmUp: [], mainSet: [], coolDown: []), note: note)
+    result["description"] = workout.description
+    result["note"] = workout.note
+    
+    
+    
+    return result
 }

@@ -43,6 +43,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A28D8B431F48F24D00963D03"
+               BuildableName = "SwimWorkoutsUITests.xctest"
+               BlueprintName = "SwimWorkoutsUITests"
+               ReferencedContainer = "container:SwimWorkouts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A2A39FAF1E353964001D3BA4"
+               BuildableName = "SwimWorkoutsTests.xctest"
+               BlueprintName = "SwimWorkoutsTests"
+               ReferencedContainer = "container:SwimWorkouts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

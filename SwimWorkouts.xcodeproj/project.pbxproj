@@ -17,7 +17,6 @@
 		A2A39FA71E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FA61E353964001D3BA4 /* Assets.xcassets */; };
 		A2A39FAA1E353964001D3BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FA81E353964001D3BA4 /* LaunchScreen.storyboard */; };
 		A2A39FB51E353964001D3BA4 /* SwimWorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FB41E353964001D3BA4 /* SwimWorkoutsTests.swift */; };
-		A2A39FC01E353964001D3BA4 /* SwimWorkoutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FBF1E353964001D3BA4 /* SwimWorkoutsUITests.swift */; };
 		A2A39FC51E353964001D3BA4 /* SwimWorkouts WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A2A39FC41E353964001D3BA4 /* SwimWorkouts WatchKit App.app */; };
 		A2A39FCB1E353964001D3BA4 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FC91E353964001D3BA4 /* Interface.storyboard */; };
 		A2A39FCD1E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FCC1E353964001D3BA4 /* Assets.xcassets */; };
@@ -26,17 +25,14 @@
 		A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FDA1E353964001D3BA4 /* ExtensionDelegate.swift */; };
 		A2A39FDD1E353964001D3BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FDC1E353964001D3BA4 /* Assets.xcassets */; };
 		A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FF21E354BE7001D3BA4 /* Workout.swift */; };
+		A2ABDE991F59FE0B0006349D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE981F59FE0B0006349D /* Data.swift */; };
+		A2ABDE9B1F5A00120006349D /* BuiltInWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9A1F5A00120006349D /* BuiltInWorkouts.swift */; };
+		A2ABDE9D1F5AE64A0006349D /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9C1F5AE64A0006349D /* DataTests.swift */; };
+		A2ABDE9F1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9E1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A2A39FB11E353964001D3BA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A2A39F941E353963001D3BA4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2A39F9B1E353963001D3BA4;
-			remoteInfo = SwimWorkouts;
-		};
-		A2A39FBC1E353964001D3BA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A2A39F941E353963001D3BA4 /* Project object */;
 			proxyType = 1;
@@ -99,9 +95,6 @@
 		A2A39FB01E353964001D3BA4 /* SwimWorkoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwimWorkoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A39FB41E353964001D3BA4 /* SwimWorkoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimWorkoutsTests.swift; sourceTree = "<group>"; };
 		A2A39FB61E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2A39FBB1E353964001D3BA4 /* SwimWorkoutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwimWorkoutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2A39FBF1E353964001D3BA4 /* SwimWorkoutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimWorkoutsUITests.swift; sourceTree = "<group>"; };
-		A2A39FC11E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A39FC41E353964001D3BA4 /* SwimWorkouts WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwimWorkouts WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A39FCA1E353964001D3BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		A2A39FCC1E353964001D3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +105,10 @@
 		A2A39FDC1E353964001D3BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2A39FDE1E353964001D3BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A39FF21E354BE7001D3BA4 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		A2ABDE981F59FE0B0006349D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A2ABDE9A1F5A00120006349D /* BuiltInWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInWorkouts.swift; sourceTree = "<group>"; };
+		A2ABDE9C1F5AE64A0006349D /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		A2ABDE9E1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWorkoutsControllerInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +120,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A2A39FAD1E353964001D3BA4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2A39FB81E353964001D3BA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,7 +167,6 @@
 			children = (
 				A2A39F9E1E353964001D3BA4 /* SwimWorkouts */,
 				A2A39FB31E353964001D3BA4 /* SwimWorkoutsTests */,
-				A2A39FBE1E353964001D3BA4 /* SwimWorkoutsUITests */,
 				A2A39FC81E353964001D3BA4 /* SwimWorkouts WatchKit App */,
 				A2A39FD71E353964001D3BA4 /* SwimWorkouts WatchKit Extension */,
 				A2A39F9D1E353964001D3BA4 /* Products */,
@@ -189,7 +178,6 @@
 			children = (
 				A2A39F9C1E353964001D3BA4 /* SwimWorkouts.app */,
 				A2A39FB01E353964001D3BA4 /* SwimWorkoutsTests.xctest */,
-				A2A39FBB1E353964001D3BA4 /* SwimWorkoutsUITests.xctest */,
 				A2A39FC41E353964001D3BA4 /* SwimWorkouts WatchKit App.app */,
 				A2A39FD31E353964001D3BA4 /* SwimWorkouts WatchKit Extension.appex */,
 			);
@@ -205,6 +193,8 @@
 				A2A39FA61E353964001D3BA4 /* Assets.xcassets */,
 				A2A39FA81E353964001D3BA4 /* LaunchScreen.storyboard */,
 				A2A39FAB1E353964001D3BA4 /* Info.plist */,
+				A2ABDE981F59FE0B0006349D /* Data.swift */,
+				A2ABDE9A1F5A00120006349D /* BuiltInWorkouts.swift */,
 			);
 			path = SwimWorkouts;
 			sourceTree = "<group>";
@@ -214,17 +204,9 @@
 			children = (
 				A2A39FB41E353964001D3BA4 /* SwimWorkoutsTests.swift */,
 				A2A39FB61E353964001D3BA4 /* Info.plist */,
+				A2ABDE9C1F5AE64A0006349D /* DataTests.swift */,
 			);
 			path = SwimWorkoutsTests;
-			sourceTree = "<group>";
-		};
-		A2A39FBE1E353964001D3BA4 /* SwimWorkoutsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A2A39FBF1E353964001D3BA4 /* SwimWorkoutsUITests.swift */,
-				A2A39FC11E353964001D3BA4 /* Info.plist */,
-			);
-			path = SwimWorkoutsUITests;
 			sourceTree = "<group>";
 		};
 		A2A39FC81E353964001D3BA4 /* SwimWorkouts WatchKit App */ = {
@@ -247,6 +229,7 @@
 				A2A39FDC1E353964001D3BA4 /* Assets.xcassets */,
 				A2A39FDE1E353964001D3BA4 /* Info.plist */,
 				A2A39FF21E354BE7001D3BA4 /* Workout.swift */,
+				A2ABDE9E1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift */,
 			);
 			path = "SwimWorkouts WatchKit Extension";
 			sourceTree = "<group>";
@@ -291,24 +274,6 @@
 			productReference = A2A39FB01E353964001D3BA4 /* SwimWorkoutsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A2A39FBA1E353964001D3BA4 /* SwimWorkoutsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A2A39FEF1E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkoutsUITests" */;
-			buildPhases = (
-				A2A39FB71E353964001D3BA4 /* Sources */,
-				A2A39FB81E353964001D3BA4 /* Frameworks */,
-				A2A39FB91E353964001D3BA4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A2A39FBD1E353964001D3BA4 /* PBXTargetDependency */,
-			);
-			name = SwimWorkoutsUITests;
-			productName = SwimWorkoutsUITests;
-			productReference = A2A39FBB1E353964001D3BA4 /* SwimWorkoutsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		A2A39FC31E353964001D3BA4 /* SwimWorkouts WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2A39FE51E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkouts WatchKit App" */;
@@ -349,7 +314,7 @@
 		A2A39F941E353963001D3BA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Brad Moore";
 				TargetAttributes = {
@@ -360,12 +325,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					A2A39FAF1E353964001D3BA4 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 79KQTL9372;
-						ProvisioningStyle = Automatic;
-						TestTargetID = A2A39F9B1E353963001D3BA4;
-					};
-					A2A39FBA1E353964001D3BA4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 79KQTL9372;
 						ProvisioningStyle = Automatic;
@@ -400,7 +359,6 @@
 			targets = (
 				A2A39F9B1E353963001D3BA4 /* SwimWorkouts */,
 				A2A39FAF1E353964001D3BA4 /* SwimWorkoutsTests */,
-				A2A39FBA1E353964001D3BA4 /* SwimWorkoutsUITests */,
 				A2A39FC31E353964001D3BA4 /* SwimWorkouts WatchKit App */,
 				A2A39FD21E353964001D3BA4 /* SwimWorkouts WatchKit Extension */,
 			);
@@ -419,13 +377,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A2A39FAE1E353964001D3BA4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2A39FB91E353964001D3BA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -457,6 +408,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A39FA21E353964001D3BA4 /* ViewController.swift in Sources */,
+				A2ABDE9B1F5A00120006349D /* BuiltInWorkouts.swift in Sources */,
+				A2ABDE991F59FE0B0006349D /* Data.swift in Sources */,
 				A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,14 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A39FB51E353964001D3BA4 /* SwimWorkoutsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2A39FB71E353964001D3BA4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A2A39FC01E353964001D3BA4 /* SwimWorkoutsUITests.swift in Sources */,
+				A2ABDE9D1F5AE64A0006349D /* DataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +429,7 @@
 			files = (
 				A2A39FDB1E353964001D3BA4 /* ExtensionDelegate.swift in Sources */,
 				A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */,
+				A2ABDE9F1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift in Sources */,
 				A22A9D9F1E35BAA400A72AAF /* SegmentDetailController.swift in Sources */,
 				A2A39FD91E353964001D3BA4 /* WorkoutController.swift in Sources */,
 				A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */,
@@ -498,11 +445,6 @@
 			isa = PBXTargetDependency;
 			target = A2A39F9B1E353963001D3BA4 /* SwimWorkouts */;
 			targetProxy = A2A39FB11E353964001D3BA4 /* PBXContainerItemProxy */;
-		};
-		A2A39FBD1E353964001D3BA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A2A39F9B1E353963001D3BA4 /* SwimWorkouts */;
-			targetProxy = A2A39FBC1E353964001D3BA4 /* PBXContainerItemProxy */;
 		};
 		A2A39FC71E353964001D3BA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -781,34 +723,6 @@
 			};
 			name = Release;
 		};
-		A2A39FF01E353964001D3BA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 79KQTL9372;
-				INFOPLIST_FILE = SwimWorkoutsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bradmoore.org.SwimWorkoutsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = SwimWorkouts;
-			};
-			name = Debug;
-		};
-		A2A39FF11E353964001D3BA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 79KQTL9372;
-				INFOPLIST_FILE = SwimWorkoutsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bradmoore.org.SwimWorkoutsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = SwimWorkouts;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -853,15 +767,6 @@
 			buildConfigurations = (
 				A2A39FED1E353964001D3BA4 /* Debug */,
 				A2A39FEE1E353964001D3BA4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A2A39FEF1E353964001D3BA4 /* Build configuration list for PBXNativeTarget "SwimWorkoutsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A2A39FF01E353964001D3BA4 /* Debug */,
-				A2A39FF11E353964001D3BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

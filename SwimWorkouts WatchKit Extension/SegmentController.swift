@@ -23,7 +23,10 @@ class SegmentInitializer {
         table.setNumberOfRows(segments.count, withRowType: rowType)
         
         for (index, value) in segments.enumerated() {
-            let row = table.rowController(at: index) as! SegmentLabeller
+            guard let row = table.rowController(at: index) as? SegmentLabeller else {
+                continue
+            }
+            
             row.segmentLabel.setText("\(segmentNumber): \(value.description)")
             self.segmentNumber += 1
         }

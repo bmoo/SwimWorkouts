@@ -9,32 +9,26 @@
 import WatchKit
 import WatchConnectivity
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate  {
+class ExtensionDelegate: NSObject, WKExtensionDelegate  {
     @available(watchOS 2.2, *)
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
     }
-
+    
     func applicationDidFinishLaunching() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        let session = WCSession.default
-        session.delegate = self
-        session.activate()
-        
-        print("SwimApp Finished setting up the session")
-        NSLog("SwimApp Maybe this will print")
     }
-
+    
     func applicationDidBecomeActive() {
         NSLog("SwimApp Application is now active")
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillResignActive() {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, etc.
         NSLog("SwimApp Application resigning active")
     }
-
+    
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
         // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
         for task in backgroundTasks {
@@ -59,14 +53,4 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate  {
         }
     }
     
-    /** Called on the delegate of the receiver. Will be called on startup if an applicationContext is available. */
-    public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        let context = applicationContext
-        let value = context["foo"]
-        
-        print("SwimApp Value is \(String(describing: value))")
-        NSLog("SwimApp Value is \(String(describing: value))")
-    }
-    
-
 }
