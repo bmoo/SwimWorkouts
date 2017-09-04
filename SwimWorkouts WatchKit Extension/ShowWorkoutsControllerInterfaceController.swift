@@ -28,7 +28,7 @@ class ShowWorkoutsController: WKInterfaceController, WCSessionDelegate {
     
     public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         print("sessionDidReceiveUserInfo()")
-        self.workouts = [createWorkoutFrom(dictionary: userInfo)]
+        self.workouts = [createWorkoutFromDictionary(userInfo)]
     }
     
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {

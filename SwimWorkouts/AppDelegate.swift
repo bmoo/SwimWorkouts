@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func sendStartupData(_ session: WatchConnectingSession) {
         if (session.isPaired && session.isWatchAppInstalled && session.isReachable) {
-            let fifthWorkout = createUserInfoFromWorkout(workout: FifthWorkout())
+            let fifthWorkout = serializeWorkout(FifthWorkout())
             let userInfoTransfer = session.transferUserInfo(fifthWorkout)
             
             print(userInfoTransfer)
