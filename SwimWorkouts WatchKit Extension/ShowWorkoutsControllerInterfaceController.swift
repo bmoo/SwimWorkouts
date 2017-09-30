@@ -8,31 +8,20 @@
 
 import WatchKit
 import Foundation
-import WatchConnectivity
 
-class ShowWorkoutsController: WKInterfaceController, WCSessionDelegate {
+class ShowWorkoutsController: WKInterfaceController {
 
     var workouts: [Workout] = []
+    let workoutRepository = WorkoutRepository()
 
     override init() {
         super.init()
         
-        let session = WCSession.default
-        session.delegate = self
-        session.activate()
+        workoutRepository.initWorkouts()
     }
 
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        return
-    }
-    
-    public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print("sessionDidReceiveUserInfo()")
-        self.workouts = [createWorkoutFromDictionary(userInfo)]
-    }
-    
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
-        return workouts
+        return workoutRepository.getWorkouts()
     }
 
 }
