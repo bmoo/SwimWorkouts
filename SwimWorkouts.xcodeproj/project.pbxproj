@@ -18,6 +18,7 @@
 		A269BDDF1F780897007B9AA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A269BDDE1F780897007B9AA9 /* CloudKit.framework */; };
 		A269BDE31F7808F3007B9AA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A269BDE21F7808F3007B9AA9 /* CloudKit.framework */; };
 		A2886BD51F781CB3009E8BA0 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2886BD41F781CB3009E8BA0 /* WorkoutRepository.swift */; };
+		A2965A9E1F81376000FE574E /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2965A9D1F81376000FE574E /* ShowController.swift */; };
 		A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */; };
 		A2A39FA21E353964001D3BA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FA11E353964001D3BA4 /* ViewController.swift */; };
 		A2A39FA51E353964001D3BA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A39FA31E353964001D3BA4 /* Main.storyboard */; };
@@ -101,6 +102,7 @@
 		A269BDE11F7808F1007B9AA9 /* SwimWorkouts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimWorkouts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		A269BDE21F7808F3007B9AA9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		A2886BD41F781CB3009E8BA0 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
+		A2965A9D1F81376000FE574E /* ShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
 		A2A39F9C1E353964001D3BA4 /* SwimWorkouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimWorkouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2A39FA11E353964001D3BA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A2965A9C1F8136F900FE574E /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				A2965A9D1F81376000FE574E /* ShowController.swift */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
 		A2A39F931E353963001D3BA4 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				A22431FF1F803DDE00C602D5 /* List */,
+				A2965A9C1F8136F900FE574E /* Show */,
 				A269BDDC1F78088E007B9AA9 /* SwimWorkouts.entitlements */,
 				A2A39F9F1E353964001D3BA4 /* AppDelegate.swift */,
 				A2A39FA11E353964001D3BA4 /* ViewController.swift */,
@@ -473,6 +484,7 @@
 				A22431FA1F80376E00C602D5 /* Repository.swift in Sources */,
 				A2ABDE9B1F5A00120006349D /* BuiltInWorkouts.swift in Sources */,
 				A22432011F803E2A00C602D5 /* ListCell.swift in Sources */,
+				A2965A9E1F81376000FE574E /* ShowController.swift in Sources */,
 				A2ABDE991F59FE0B0006349D /* Data.swift in Sources */,
 				A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */,
 				A22431FE1F803B5600C602D5 /* ListController.swift in Sources */,
