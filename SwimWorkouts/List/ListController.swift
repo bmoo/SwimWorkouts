@@ -30,8 +30,19 @@ class ListController : UITableViewController {
             fatalError("The dequeued cell is not an instance of ListCell.")
         }
         
+        cell.workout = workoutList[indexPath.row]
         cell.nameLabel.text = workoutList[indexPath.row].description
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! ShowController
+        let senderCell = sender as! ListCell
+        
+        
+        destination.workout = senderCell.workout
+    }
+    
+
 }

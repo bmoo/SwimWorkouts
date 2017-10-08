@@ -11,5 +11,7 @@ import UIKit
 
 class ListCell: UITableViewCell {
     
+    var workout: Workout!
+    
     @IBOutlet weak var nameLabel: UILabel!
 }
