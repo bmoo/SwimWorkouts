@@ -37,11 +37,10 @@ class ListController : UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ShowController
-        let senderCell = sender as! ListCell
-        
-        
-        destination.workout = senderCell.workout
+        if let destination = segue.destination as? ShowController {
+            let senderCell = sender as! ListCell
+            destination.workout = senderCell.workout
+        }
     }
     
 

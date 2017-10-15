@@ -13,3 +13,4 @@ class SegmentCell: UITableViewCell {
     
     @IBOutlet weak var segmentLabel: UILabel!
 }
+
