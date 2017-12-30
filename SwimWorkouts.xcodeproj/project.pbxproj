@@ -15,8 +15,10 @@
 		A22A9D981E35681700A72AAF /* RowControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D971E35681700A72AAF /* RowControllers.swift */; };
 		A22A9D9A1E356D7C00A72AAF /* SegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D991E356D7C00A72AAF /* SegmentController.swift */; };
 		A22A9D9F1E35BAA400A72AAF /* SegmentDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A9D9E1E35BAA400A72AAF /* SegmentDetailController.swift */; };
+		A22E12071F93A80B00000747 /* CreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22E12061F93A80B00000747 /* CreateController.swift */; };
 		A269BDDF1F780897007B9AA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A269BDDE1F780897007B9AA9 /* CloudKit.framework */; };
 		A269BDE31F7808F3007B9AA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A269BDE21F7808F3007B9AA9 /* CloudKit.framework */; };
+		A27494701F93CADD002BFF21 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A274946F1F93CADD002BFF21 /* ListRepository.swift */; };
 		A2886BD51F781CB3009E8BA0 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2886BD41F781CB3009E8BA0 /* WorkoutRepository.swift */; };
 		A2965A9E1F81376000FE574E /* ShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2965A9D1F81376000FE574E /* ShowController.swift */; };
 		A2965AA01F897F3500FE574E /* SegmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2965A9F1F897F3500FE574E /* SegmentCell.swift */; };
@@ -35,7 +37,6 @@
 		A2A39FF31E354BE7001D3BA4 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A39FF21E354BE7001D3BA4 /* Workout.swift */; };
 		A2ABDE991F59FE0B0006349D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE981F59FE0B0006349D /* Data.swift */; };
 		A2ABDE9B1F5A00120006349D /* BuiltInWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9A1F5A00120006349D /* BuiltInWorkouts.swift */; };
-		A2ABDE9D1F5AE64A0006349D /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9C1F5AE64A0006349D /* DataTests.swift */; };
 		A2ABDE9F1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ABDE9E1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,11 +98,13 @@
 		A22A9D971E35681700A72AAF /* RowControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowControllers.swift; sourceTree = "<group>"; };
 		A22A9D991E356D7C00A72AAF /* SegmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentController.swift; sourceTree = "<group>"; };
 		A22A9D9E1E35BAA400A72AAF /* SegmentDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentDetailController.swift; sourceTree = "<group>"; };
+		A22E12061F93A80B00000747 /* CreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateController.swift; sourceTree = "<group>"; };
 		A269BDDC1F78088E007B9AA9 /* SwimWorkouts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimWorkouts.entitlements; sourceTree = "<group>"; };
 		A269BDDE1F780897007B9AA9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		A269BDE01F7808B9007B9AA9 /* SwimWorkouts WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimWorkouts WatchKit App.entitlements"; sourceTree = "<group>"; };
 		A269BDE11F7808F1007B9AA9 /* SwimWorkouts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimWorkouts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		A269BDE21F7808F3007B9AA9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		A274946F1F93CADD002BFF21 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
 		A2886BD41F781CB3009E8BA0 /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
 		A2965A9D1F81376000FE574E /* ShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowController.swift; sourceTree = "<group>"; };
 		A2965A9F1F897F3500FE574E /* SegmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentCell.swift; sourceTree = "<group>"; };
@@ -126,7 +129,6 @@
 		A2A39FF21E354BE7001D3BA4 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		A2ABDE981F59FE0B0006349D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A2ABDE9A1F5A00120006349D /* BuiltInWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltInWorkouts.swift; sourceTree = "<group>"; };
-		A2ABDE9C1F5AE64A0006349D /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		A2ABDE9E1F5C73710006349D /* ShowWorkoutsControllerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWorkoutsControllerInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,14 @@
 			name = SegmentDetail;
 			sourceTree = "<group>";
 		};
+		A22E12051F93A7FA00000747 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				A22E12061F93A80B00000747 /* CreateController.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		A269BDDD1F780897007B9AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,14 @@
 				A269BDDE1F780897007B9AA9 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A274946E1F93CAC9002BFF21 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				A274946F1F93CADD002BFF21 /* ListRepository.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		A2965A9C1F8136F900FE574E /* Show */ = {
@@ -238,6 +256,8 @@
 		A2A39F9E1E353964001D3BA4 /* SwimWorkouts */ = {
 			isa = PBXGroup;
 			children = (
+				A274946E1F93CAC9002BFF21 /* DB */,
+				A22E12051F93A7FA00000747 /* Create */,
 				A22431FF1F803DDE00C602D5 /* List */,
 				A2965A9C1F8136F900FE574E /* Show */,
 				A269BDDC1F78088E007B9AA9 /* SwimWorkouts.entitlements */,
@@ -256,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				A2A39FB61E353964001D3BA4 /* Info.plist */,
-				A2ABDE9C1F5AE64A0006349D /* DataTests.swift */,
 				A22431FB1F80381000C602D5 /* WorkoutRepositoryTest.swift */,
 			);
 			path = SwimWorkoutsTests;
@@ -488,6 +507,8 @@
 				A2ABDE9B1F5A00120006349D /* BuiltInWorkouts.swift in Sources */,
 				A22432011F803E2A00C602D5 /* ListCell.swift in Sources */,
 				A2965A9E1F81376000FE574E /* ShowController.swift in Sources */,
+				A27494701F93CADD002BFF21 /* ListRepository.swift in Sources */,
+				A22E12071F93A80B00000747 /* CreateController.swift in Sources */,
 				A2ABDE991F59FE0B0006349D /* Data.swift in Sources */,
 				A2965AA01F897F3500FE574E /* SegmentCell.swift in Sources */,
 				A2A39FA01E353964001D3BA4 /* AppDelegate.swift in Sources */,
@@ -499,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2ABDE9D1F5AE64A0006349D /* DataTests.swift in Sources */,
 				A22431FC1F80381000C602D5 /* WorkoutRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -664,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -758,11 +778,13 @@
 				CODE_SIGN_ENTITLEMENTS = SwimWorkouts/SwimWorkouts.entitlements;
 				DEVELOPMENT_TEAM = 79KQTL9372;
 				INFOPLIST_FILE = SwimWorkouts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradmoore.org.SwimWorkouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -773,11 +795,13 @@
 				CODE_SIGN_ENTITLEMENTS = SwimWorkouts/SwimWorkouts.entitlements;
 				DEVELOPMENT_TEAM = 79KQTL9372;
 				INFOPLIST_FILE = SwimWorkouts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bradmoore.org.SwimWorkouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

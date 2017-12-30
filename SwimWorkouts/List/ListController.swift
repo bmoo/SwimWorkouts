@@ -14,7 +14,7 @@ class ListController : UITableViewController {
     
     override func viewDidLoad() {
         let repository = WorkoutRepository()
-        self.workoutList = repository.getAll()
+        self.workoutList = repository.getAll(controller: self)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

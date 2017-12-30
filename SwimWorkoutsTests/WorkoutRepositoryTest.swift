@@ -11,7 +11,7 @@ import XCTest
 
 class WorkoutRepositoryTest: XCTestCase {
     
-    var subject: WorkoutRepository?
+    var subject: WorkoutRepository!
     
     override func setUp() {
         super.setUp()
@@ -20,9 +20,8 @@ class WorkoutRepositoryTest: XCTestCase {
     }
     
     func test_whenGetAll_returnsTwoWorkouts() {
-        let allWorkouts = subject?.getAll()
+        let allWorkouts = subject.getAll()
         
-        XCTAssertEqual(2, allWorkouts?.count)
+        XCTAssertEqual(2, allWorkouts.count)
     }
-    
 }
