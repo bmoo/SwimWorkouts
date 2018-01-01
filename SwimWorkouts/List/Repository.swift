@@ -8,7 +8,6 @@
 
 import Foundation
 import CloudKit
-import UIKit
 
 class WorkoutRepository {
     
@@ -19,20 +18,13 @@ class WorkoutRepository {
         self.workouts = [Workout]()
     }
     
-    func getAll(controller: ListController) -> [Workout] {
-        self.workouts = [Workout]()
+    func getAll(controller: ListController, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
         let container = CKContainer(identifier: cloudKitContainerId)
         
-        loadRecords(database: container.publicCloudDatabase, controller: controller)
-        
-        return self.workouts
+        loadRecords(database: container.publicCloudDatabase, onCompletion: completionFunc)
     }
     
-    func loadRecords(database: CKDatabase, controller: ListController) {
-        let query = CKQuery(recordType: "Workout", predicate: NSPredicate(value: true))
-        
-        let queryOperation = CKQueryOperation(query: query)
-        
+    fileprivate func setupQueryOperation(_ queryOperation: CKQueryOperation, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
         queryOperation.recordFetchedBlock = { record in
             let description = record.value(forKeyPath: "description") as! String
             let note = record.value(forKeyPath: "note") as? String ?? "No note provided"
@@ -40,18 +32,14 @@ class WorkoutRepository {
             self.workouts.append(Workout(description: description, segments: SegmentSet(warmUp: [Segment](), mainSet: [Segment](), coolDown: [Segment]()), note: note))
         }
         
-        queryOperation.queryCompletionBlock = { (cursor, error) in
-            if let foundError = error {
-                NSLog(foundError.localizedDescription)
-            }
-            
-            DispatchQueue.main.async {
-                if error == nil {
-                    controller.workoutList = self.workouts
-                    controller.tableView.reloadData()
-                }
-            }
-        }
+        queryOperation.queryCompletionBlock = completionFunc
+    }
+    
+    func loadRecords(database: CKDatabase, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+        let query = CKQuery(recordType: "Workout", predicate: NSPredicate(value: true))
+        let queryOperation = CKQueryOperation(query: query)
+       
+        setupQueryOperation(queryOperation, onCompletion: completionFunc)
 
         database.add(queryOperation)
     }

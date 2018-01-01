@@ -14,7 +14,15 @@ class ListController : UITableViewController {
     
     override func viewDidLoad() {
         let repository = WorkoutRepository()
-        self.workoutList = repository.getAll(controller: self)
+        
+        repository.getAll(controller: self, onCompletion: { (cursor, error) in
+            if let foundError = error {
+                NSLog(foundError.localizedDescription)
+            }
+            
+            self.workoutList = repository.workouts
+            self.tableView.reloadData()
+        })
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
