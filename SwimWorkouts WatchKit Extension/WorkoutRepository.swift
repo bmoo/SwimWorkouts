@@ -32,7 +32,7 @@ class WorkoutRepository {
             
             for record: CKRecord in record! {
                 let description = record.value(forKeyPath: "description") as! String
-                let note = record.value(forKeyPath: "note") as! String
+                let note = record.value(forKeyPath: "note") as? String ?? "No note provided"
                 
                 results.append(Workout(description: description, segments: SegmentSet(warmUp: [Segment](), mainSet: [Segment](), coolDown: [Segment]()), note: note))
             }

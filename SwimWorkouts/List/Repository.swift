@@ -18,10 +18,9 @@ class WorkoutRepository {
         self.workouts = [Workout]()
     }
     
-    func getAll(controller: ListController, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+    func getAll(onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
         let container = CKContainer(identifier: cloudKitContainerId)
-        
-        loadRecords(database: container.publicCloudDatabase, onCompletion: completionFunc)
+        loadRecords(database: container.privateCloudDatabase, onCompletion: completionFunc)
     }
     
     fileprivate func setupQueryOperation(_ queryOperation: CKQueryOperation, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
@@ -35,12 +34,24 @@ class WorkoutRepository {
         queryOperation.queryCompletionBlock = completionFunc
     }
     
-    func loadRecords(database: CKDatabase, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+    fileprivate func loadRecords(database: CKDatabase, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
         let query = CKQuery(recordType: "Workout", predicate: NSPredicate(value: true))
         let queryOperation = CKQueryOperation(query: query)
        
         setupQueryOperation(queryOperation, onCompletion: completionFunc)
 
         database.add(queryOperation)
+    }
+    
+    func create(_ workout: Workout, onCompletion completionFunc: @escaping (CKRecord?, Error?) -> Void) {
+        let container = CKContainer(identifier: cloudKitContainerId)
+        
+        let database = container.privateCloudDatabase
+        
+        let record = CKRecord(recordType: "Workout")
+        record["description"] = workout.description as NSString
+        
+        NSLog("calling save")
+        database.save(record, completionHandler: completionFunc)
     }
 }

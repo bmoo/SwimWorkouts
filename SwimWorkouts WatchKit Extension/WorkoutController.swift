@@ -26,11 +26,10 @@ class WorkoutController: WKInterfaceController {
         
         print("InterfaceController.awake()")
       }
+    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
      
-        print("willActivate()")
         workoutTable.setNumberOfRows(workouts.count, withRowType: "workoutRowController")
         
         for (index, value) in workouts.enumerated() {
@@ -40,7 +39,6 @@ class WorkoutController: WKInterfaceController {
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 }

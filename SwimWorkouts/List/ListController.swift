@@ -10,19 +10,36 @@ import Foundation
 import UIKit
 
 class ListController : UITableViewController {
+    
+    
     var workoutList: [Workout] = []
     
-    override func viewDidLoad() {
-        let repository = WorkoutRepository()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        repository.getAll(controller: self, onCompletion: { (cursor, error) in
-            if let foundError = error {
-                NSLog(foundError.localizedDescription)
-            }
+        if workoutList.count == 0 {
+            let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
             
-            self.workoutList = repository.workouts
-            self.tableView.reloadData()
-        })
+            spinner.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
+            spinner.isHidden = false
+            spinner.startAnimating()
+            
+            self.tableView.addSubview(spinner)
+            self.tableView.bringSubview(toFront: spinner)
+            
+            let repository = WorkoutRepository()
+            
+            repository.getAll(onCompletion: { (cursor, error) in
+                if let foundError = error {
+                    NSLog(foundError.localizedDescription)
+                }
+                
+                self.workoutList = repository.workouts
+                spinner.removeFromSuperview()
+                
+                self.tableView.reloadData()
+            })
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,5 +68,5 @@ class ListController : UITableViewController {
         }
     }
     
-
+    
 }
