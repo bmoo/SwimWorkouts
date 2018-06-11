@@ -67,7 +67,7 @@ class SegmentController: WKInterfaceController {
     }
     
     override func awake(withContext context: Any?) {
-        workout = context as! Workout
+        workout = context as? Workout
         
         self.setTitle(workout.description)
         notesLabel.setText("\(workout.note)")

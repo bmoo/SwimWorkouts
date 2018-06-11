@@ -18,10 +18,4 @@ class WorkoutRepositoryTest: XCTestCase {
         
         subject = WorkoutRepository()
     }
-    
-    func test_whenGetAll_returnsTwoWorkouts() {
-        let allWorkouts = subject.getAll()
-        
-        XCTAssertEqual(2, allWorkouts.count)
-    }
 }

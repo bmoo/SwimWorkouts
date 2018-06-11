@@ -22,7 +22,7 @@ class SegmentDetailController: WKInterfaceController {
     @IBOutlet var snorkelLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
-        segment = context as! Segment
+        segment = context as? Segment
         
         let snorkelText = parseSnorkelText(snorkelBool: segment.snorkel)
         
