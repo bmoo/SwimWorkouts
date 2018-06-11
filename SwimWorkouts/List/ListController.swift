@@ -18,14 +18,14 @@ class ListController : UITableViewController {
         super.viewWillAppear(animated)
         
         if workoutList.count == 0 {
-            let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+            let spinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorView.Style.gray)
             
             spinner.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
             spinner.isHidden = false
             spinner.startAnimating()
             
             self.tableView.addSubview(spinner)
-            self.tableView.bringSubview(toFront: spinner)
+            self.tableView.bringSubviewToFront(spinner)
             
             let repository = WorkoutRepository()
             

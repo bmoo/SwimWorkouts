@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 
 protocol SWCloudDatabase {
-    func perform(_ query: CKQuery, inZoneWith zoneID: CKRecordZoneID?, completionHandler: @escaping ([CKRecord]?, Error?) -> Swift.Void)
+    func perform(_ query: CKQuery, inZoneWith zoneID: CKRecordZone.ID?, completionHandler: @escaping ([CKRecord]?, Error?) -> Swift.Void)
 }
 
 extension CKDatabase: SWCloudDatabase {}

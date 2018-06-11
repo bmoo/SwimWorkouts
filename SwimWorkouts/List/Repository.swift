@@ -18,12 +18,12 @@ class WorkoutRepository {
         self.workouts = [Workout]()
     }
     
-    func getAll(onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+    func getAll(onCompletion completionFunc: @escaping (CKQueryOperation.Cursor?, Error?) -> Void) {
         let container = CKContainer(identifier: cloudKitContainerId)
         loadRecords(database: container.privateCloudDatabase, onCompletion: completionFunc)
     }
     
-    fileprivate func setupQueryOperation(_ queryOperation: CKQueryOperation, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+    fileprivate func setupQueryOperation(_ queryOperation: CKQueryOperation, onCompletion completionFunc: @escaping (CKQueryOperation.Cursor?, Error?) -> Void) {
         queryOperation.recordFetchedBlock = { record in
             let description = record.value(forKeyPath: "description") as! String
             let note = record.value(forKeyPath: "note") as? String ?? "No note provided"
@@ -34,7 +34,7 @@ class WorkoutRepository {
         queryOperation.queryCompletionBlock = completionFunc
     }
     
-    fileprivate func loadRecords(database: CKDatabase, onCompletion completionFunc: @escaping (CKQueryCursor?, Error?) -> Void) {
+    fileprivate func loadRecords(database: CKDatabase, onCompletion completionFunc: @escaping (CKQueryOperation.Cursor?, Error?) -> Void) {
         let query = CKQuery(recordType: "Workout", predicate: NSPredicate(value: true))
         let queryOperation = CKQueryOperation(query: query)
        
