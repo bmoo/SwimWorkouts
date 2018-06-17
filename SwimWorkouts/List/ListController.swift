@@ -29,13 +29,17 @@ class ListController : UITableViewController {
             
             let repository = WorkoutRepository()
             
+            // a completion handler could run off of the main thread
             repository.getAll(onCompletion: { (cursor, error) in
                 if let foundError = error {
                     NSLog(foundError.localizedDescription)
                 }
                 
                 self.workoutList = repository.workouts
-                spinner.removeFromSuperview()
+                
+                DispatchQueue.main.async {
+                    spinner.removeFromSuperview()
+                }
                 
                 self.tableView.reloadData()
             })
